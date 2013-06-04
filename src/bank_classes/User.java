@@ -24,14 +24,14 @@ public class User {
 	}
 
 	public boolean usernameMatch(String username) {
-		return this.username.equals(username);
+		return this.getUsername().equals(username);
 	}
 	
 	public User(String name,String surname,Calendar birthday,String username, String password){
 		this.name = name;
 		this.surname = surname;
 		this.birthday = birthday;
-		this.username = username;
+		this.setUsername(username);
 		this.password = password;
 	}
 	
@@ -40,7 +40,15 @@ public class User {
 					name,
 					surname,
 					birthday.toString(),
-					username,
+					getUsername(),
 					password);
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 }

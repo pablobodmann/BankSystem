@@ -1,4 +1,7 @@
 package bank_classes;
+import java.util.Collection;
+
+import bankexceptions.DuplicateException;
 import bankexceptions.UserNotFoundException;
 
 //
@@ -14,8 +17,8 @@ import bankexceptions.UserNotFoundException;
 
 public class Branch {
 	private String code;
-	private Iterable<User> clerks;
-	private Iterable<User> accounts;
+	private Collection<User> clerks;
+	private Collection<User> accounts;
 	private String name;
 
 	private boolean find(Iterable<User> collection, String user_id) {
@@ -43,8 +46,16 @@ public class Branch {
 		return search_result;
 	}
 
-	public Branch(String code, String name, Iterable<User> client,
-			Iterable<User> clerks) {
+	private User add_user(Collection<User> collection, User user) throws DuplicateException{
+		if(find(collection,
+				user.getUsername())){
+			throw new DuplicateException(user.toString());
+		}
+		collection.add(user);
+	}
+
+	public Branch(String code, String name, Collection<User> client,
+			Collection<User> clerks) {
 		this.code = code;
 		this.name = name;
 		this.clerks = clerks;
@@ -74,16 +85,19 @@ public class Branch {
 	}
 
 	public boolean has_account(String client) {
-		return false;
+		return find(accounts,client);
 
 	}
 
 	public boolean works_here(String clerk) {
-		return false;
-
+		return find(clerks,clerk);
 	}
 
 	public void add_client(Client client) {
+		
+	}
+
+	public void add_clerk(Clerk client) {
 
 	}
 
