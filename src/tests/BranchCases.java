@@ -31,7 +31,8 @@ public class BranchCases {
 
 	@Test(expected = UserNotFoundException.class) 
 	public void cant_get_inexistent_client() throws UserNotFoundException {
-		b.get_client("John Constantine");
+		String inexistent_user = "John Constantine";
+		b.get_client(inexistent_user);
 	}
 
 }

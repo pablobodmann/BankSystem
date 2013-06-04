@@ -21,13 +21,23 @@ public class UserCases {
 	}
 
 	@Test
-	public void test_username_matching_matches() {
+	public void username_matching_matches() {
 		assertTrue(user.usernameMatch("SYSTEM_USER"));
 	}
 
 	@Test
 	public void username_matching_dont_match() {
 		assertFalse(user.usernameMatch("OTHER"));
+	}
+
+	@Test
+	public void password_matching_matches() {
+		assertTrue(user.passwordMatch("XCKLMN$#え"));
+	}
+
+	@Test
+	public void password_matching_dont_match() {
+		assertFalse(user.passwordMatch("OTHER"));
 	}
 
 }
