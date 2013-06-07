@@ -14,8 +14,9 @@ package bank_classes;
 
 
 public class Account {
-	public String account_code;
-	public Number initial_balance;
+	private String account_code;
+	private Number initial_balance;
+	private 
 	public Number get_balance() {
 	
 	}
