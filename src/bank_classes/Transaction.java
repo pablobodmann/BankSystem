@@ -19,6 +19,13 @@ public class Transaction {
 	private Number value;
 	private String this_acc_code;
 
+	public Transaction(String location_access_branch_code, Date date, Number value, String this_acc_code){
+	    
+	}
+	
+	
+	
+	
 	public Number get_value() {
           return value;
 	}
