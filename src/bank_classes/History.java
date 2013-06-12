@@ -12,7 +12,7 @@ import java.util.*;
 //
 
 public History(){
-	List<Withdrawal> list_withdraw = new ArrayList<Withdrawaln>(50);
+	List<Withdrawal> list_withdraw = new ArrayList<Withdrawal>(50);
 	List<Deposit> list_deposit = new ArrayList<Deposit>(50);
 	List<Transaction> list_transaction = new ArrayList<Transaction>(50);
 }
@@ -20,8 +20,17 @@ public History(){
 
 public class History {
 	public Money sum_transaction_values() {
-	      Money sum;
-		
+	      Money sum = new money;
+	      for(Withdrawal element, list_withdraw){	    	  
+	    	  sum=element.add(sum);
+	      }
+	      for(Deposit element : list_deposit){
+	    	  sum=element.add(sum)
+	      }
+	      for(Transaction element : list_transaction){
+	          money=element.add(sum)
+	      }
+		return sum;
 	}
 	
 	public void store_transaction(Transaction t) {
