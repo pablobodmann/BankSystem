@@ -20,11 +20,11 @@ public class Transaction {
 	private String this_acc_code;
 
 	public Transaction(String location_access_branch_code, Date date, Number value, String this_acc_code){
-	    
-	}
-	
-	
-	
+	    this.location_access_branch_code=location_access_branch_code;
+	    this.date=date;
+	    this.value=value;
+	    this.this_acc_code=this_acc_code;
+	}	
 	
 	public Number get_value() {
           return value;
