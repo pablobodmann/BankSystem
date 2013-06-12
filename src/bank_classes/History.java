@@ -11,14 +11,16 @@ import java.util.*;
 //
 //
 
-public History(){
-	List<Withdrawal> list_withdraw = new ArrayList<Withdrawal>(50);
-	List<Deposit> list_deposit = new ArrayList<Deposit>(50);
-	List<Transaction> list_transaction = new ArrayList<Transaction>(50);
-}
+
 
 
 public class History {
+	
+	public History(){
+		List<Withdrawal> list_withdraw = new ArrayList<Withdrawal>(50);
+		List<Deposit> list_deposit = new ArrayList<Deposit>(50);
+		List<Transaction> list_transaction = new ArrayList<Transaction>(50);
+	}
 	public Money sum_transaction_values() {
 	      Money sum = new money;
 	      for(Withdrawal element, list_withdraw){	    	  
