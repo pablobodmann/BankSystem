@@ -16,10 +16,10 @@ package bank_classes;
 public class Account {
 	private String account_code;
 	private String branch_code
-	private Number initial_balance;
+	private Money initial_balance;
 	private History history;
 	
-	public Account(String account_code, String branch_code, Number initial_balance){
+	public Account(String account_code, String branch_code, Money initial_balance){
 	    this.account_code = account_code;
 	    this.branch_code = branch_code;
 	    this.initial_balance = initial_balance;
