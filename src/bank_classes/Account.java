@@ -36,10 +36,13 @@ public class Account {
 	}
 	
 	public void add_to_history(Transaction t) {
-	history.store_transaction(t);
+	       history.store_transaction(t);
 	}
 	
 	public String get_branch_code() {
 		return branch_code;	
+	}
+	public String get_acc_code(){
+		return account_code;
 	}
 }

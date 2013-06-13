@@ -59,6 +59,23 @@ public class History {
 	}
 	
 	public History get_transactions(Date from, Date to) {
-	
+		History return_history = new History;
+		for(Withdrawal element, list_withdraw){
+			if(element.in_time_period(from, to)){
+	    		  return_history.store_transaction(element);  
+	    	  }
+	      }
+	      for(Deposit element : list_deposit){
+	    	  if(element.in_time_period(from, to)){
+	    		  return_history.store_transaction(element);  
+	    	  }
+	    	  
+	      }
+	      for(Transaction element : list_transaction){
+	    	  if(element.in_time_period(from, to)){
+	    		  return_history.store_transaction(element);  
+	    	  }
+	      }
+		return return_history;
 	}
 }

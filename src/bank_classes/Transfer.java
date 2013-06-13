@@ -11,24 +11,25 @@ package bank_classes;
 //
 
 public class Transfer extends Transaction {
-	public String to_accound_code;
+	public String to_account_code;
 	public String to_branch_code;
 	public String from_account_code;
 	public String from_branch_code;
-
+	
+    public void Transfer(Account from, Account to, Money Value, Date date) {
+    	this.to_account_code=to.get_acc_code;
+    	this.to_branch_code=to.get_branch_code;
+    	this.from_account_code=from.get_acc_code;
+    	this.from_branch_code=from.get_branch_code;
+    	super(from.get_branch_code, date, value, from.get_acc_code);
+	}
 	public Account get_from() {
-
+            
 	}
 
 	public Account get_to() {
 
 	}
 
-	public Number get_value() {
-
-	}
-
-	public void Transfer(Account from, Account to, int Value) {
-
-	}
+	
 }

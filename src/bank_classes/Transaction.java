@@ -19,7 +19,7 @@ public class Transaction {
 	private Money value;
 	private String this_acc_code;
 
-	public Transaction(String location_access_branch_code, Date date, Number value, String this_acc_code){
+	public Transaction(String location_access_branch_code, Date date, Money value, String this_acc_code){
 	    this.location_access_branch_code=location_access_branch_code;
 	    this.date=date;
 	    this.value=value;

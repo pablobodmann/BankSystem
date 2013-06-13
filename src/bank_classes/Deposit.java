@@ -12,4 +12,13 @@ package bank_classes;
 
 public class Deposit extends Transaction {
 	public String cashParcelCode;
+	
+	public Deposit(String location_access_branch_code, Date date, Number value, String this_acc_code, String cashParcelCode){
+		this.cashParcelCode=cashParcelCode
+		super(location_access_branch_code, date, value, this_acc_code);
+	}
+	public String get_cash_parcel_code(){
+		return cashParcelCode;
+	}
 }
+
